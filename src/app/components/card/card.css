@@ -1,0 +1,67 @@
+.content-cards__item {
+  width: calc(
+    (100% - (30px * 2)) / 3
+  ); /* отступы у каждой карточки - 2 шт по 30 пх, чтобы найти нужную ширину из 100% вычитаем отступы и делим на 3 */
+  text-decoration: none;
+}
+.content-cards__item--img {
+  width: 100%;
+  display: block;
+  margin-bottom: 12px;
+  img {
+    width: 100%;
+    display: block;
+  }
+}
+.content-cards__item--img .content-cards__item_title {
+  display: flex;
+  flex-wrap: wrap; /*текст будет переноситься */
+  gap: 4px;
+  margin-bottom: 4px;
+}
+.content-cards__item_title h5,
+.content-cards__item_title span {
+  margin: 0;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  line-height: 19px;
+  color: black;
+}
+.content-cards__item_title h5 {
+  font-weight: 700;
+}
+.content-cards__item_title span {
+  font-weight: 400;
+}
+
+.content-cards__item__description {
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  color: rgb(134, 134, 134);
+  margin-top: 0;
+  margin-bottom: 11px;
+}
+.content-cards__item--raiting {
+  color: rgb(4, 163, 30);
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+  margin: 0;
+}
+
+:host {
+  width: calc((100% - 60px) / 3);
+
+  @media (max-width: 991px) {
+    width: calc((100% - 30px) / 2);
+  }
+
+  @media (max-width: 480px) {
+    width: 100%;
+
+    min-width: 100%;
+  }
+}
